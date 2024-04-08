@@ -28,6 +28,14 @@ body {
     overflow-x: hidden;
 }
 
+main {
+    font-family: "Tilt Neon", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
 /*Barra de navegación y footer*/
 .navbar,
 footer {
@@ -75,16 +83,11 @@ footer {
 
 .contenedor-grid {
     display: grid;
-    grid-auto-rows:  45rem;
+    grid-auto-rows: 45rem;
     grid-template-columns: repeat(2, 2fr);
     gap: 4rem;
     justify-content: center;
     align-items: center;
-
-    font-family: "Tilt Neon", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
 }
 
 .inicio-sec-texto {
@@ -104,7 +107,41 @@ footer {
     height: auto;
 }
 
+/* Página ¿Quién soy?*/
+.pag-titulo {
+    color: var(--color-brown);
+}
+
+.contenedor-about {
+    color: var(--color-graylight);
+}
+
+.sobremi-desc,
+.sobremi-obj {
+    box-shadow: 0px 0px 11px -1px var(--color-graylight);
+    -webkit-box-shadow: 0px 0px 11px -1px var(--color-graylight);
+    -moz-box-shadow: 0px 0px 11px -1px var(--color-graylight);
+}
+
+p {
+    text-align: justify;
+}
+
+/* Skills */
+
+
+
 /* Elementos responsive*/
+@media screen and (max-width: 992px) {
+    footer {
+        width: 100%;
+        position: fixed !important;
+    }
+
+    .sobre-mi {
+        padding-bottom: 7rem;
+    }
+}
 
 @media (min-width: 576px) and (max-width: 992px) {
     .contenedor-grid {
@@ -135,6 +172,7 @@ footer {
         width: 2rem;
         height: auto;
     }
+
     .contenedor-grid {
         grid-auto-rows: auto;
         grid-template-columns: 1fr;
