@@ -22,14 +22,15 @@ body {
     height: 98vh;
     width: 100%;
 
-    background: rgb(7,11,14);
-    background: linear-gradient(90deg, rgba(7,11,14,1) 0%, rgba(53,58,64,1) 100%);
+    background: rgb(7, 11, 14);
+    background: linear-gradient(90deg, rgba(7, 11, 14, 1) 0%, rgba(53, 58, 64, 1) 100%);
 
     overflow-x: hidden;
 }
 
 /*Barra de navegación y footer*/
-.navbar, footer {
+.navbar,
+footer {
     background-color: var(--color-graydark);
 
     font-family: "Bebas Neue", sans-serif;
@@ -44,7 +45,8 @@ body {
     height: auto;
 }
 
-#nav-link, .btn{
+#nav-link,
+.btn {
     color: var(--color-graylight) !important;
 }
 
@@ -53,7 +55,7 @@ body {
     height: auto;
 }
 
-.nav-item:hover {
+.nav-item:active {
     border-radius: 10%;
     box-shadow: 6px 5px 8px #0000008c inset;
 }
@@ -64,8 +66,94 @@ body {
     bottom: 0;
 }
 
-.btn:hover, #nav-link:hover {
+.btn:hover,
+#nav-link:hover {
     color: var(--color-brown) !important;
 }
 
-/* Página de inicio */
+/* Contenido página de inicio */
+
+.contenedor-grid {
+    display: grid;
+    grid-auto-rows:  45rem;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Tilt Neon", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.inicio-sec-texto {
+    text-align: end;
+}
+
+.inicio-sec-texto h1 {
+    color: var(--color-brown);
+}
+
+.inicio-sec-texto h3 {
+    color: var(--color-graylight);
+}
+
+.img-inicio {
+    width: 35rem;
+    height: auto;
+}
+
+/* Elementos responsive*/
+
+@media (min-width: 576px) and (max-width: 992px) {
+    .contenedor-grid {
+        grid-auto-rows: auto;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+
+        justify-items: center;
+        align-items: center;
+
+        padding-top: 2rem;
+    }
+
+    .inicio-sec-texto {
+        text-align: center;
+    }
+
+    .img-inicio {
+        transition: all;
+        transition-duration: .5s;
+        width: 30rem;
+        height: auto;
+    }
+}
+
+@media (max-width: 575px) {
+    .nav-img {
+        width: 2rem;
+        height: auto;
+    }
+    .contenedor-grid {
+        grid-auto-rows: auto;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+
+        justify-items: center;
+        align-items: center;
+
+        padding-top: 4rem;
+    }
+
+    .inicio-sec-texto {
+        text-align: center;
+    }
+
+    .img-inicio {
+        transition: all;
+        transition-duration: .5s;
+        width: 20rem;
+        height: auto;
+    }
+}
