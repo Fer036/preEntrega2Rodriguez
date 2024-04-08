@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap rel="stylesheet"');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap rel="stylesheet');
 
 
@@ -28,9 +28,9 @@ body {
     overflow-x: hidden;
 }
 
-/*Barra de navegación*/
+/*Barra de navegación y footer*/
 .navbar, footer {
-    background-color: var(--color-dark);
+    background-color: var(--color-graydark);
 
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
@@ -48,6 +48,24 @@ body {
     color: var(--color-graylight) !important;
 }
 
-#nav-link:hover, .btn:hover {
+.nav-item {
+    width: 7rem;
+    height: auto;
+}
+
+.nav-item:hover {
+    border-radius: 10%;
+    box-shadow: 6px 5px 8px #0000008c inset;
+}
+
+#pie-pagina {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.btn:hover, #nav-link:hover {
     color: var(--color-brown) !important;
 }
+
+/* Página de inicio */
