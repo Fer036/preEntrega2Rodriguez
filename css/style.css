@@ -112,12 +112,14 @@ footer {
     color: var(--color-brown);
 }
 
-.contenedor-about {
+.contenedor-about,
+.contenedor-skills {
     color: var(--color-graylight);
 }
 
 .sobremi-desc,
-.sobremi-obj {
+.sobremi-obj,
+.skills {
     box-shadow: 0px 0px 11px -1px var(--color-graylight);
     -webkit-box-shadow: 0px 0px 11px -1px var(--color-graylight);
     -moz-box-shadow: 0px 0px 11px -1px var(--color-graylight);
@@ -128,7 +130,66 @@ p {
 }
 
 /* Skills */
+.contenedor-skills {
+    width: 100%;
+    height: auto;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-skills {
+    color: var(--color-brown);
+    margin: 3rem;
+}
+
+.skills {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 1rem;
+}
+
+.skills div {
+    margin-bottom: 0.5rem;
+}
+
+.progreso {
+    height: 2rem;
+    width: 100%;
+    margin: 0.1rem;
+    
+    border: 3px solid var(--color-brown);
+}
+
+.progreso p {
+    color: var(--color-brown);
+    margin-left: 3rem;
+
+    font-weight: bold;
+}
+
+.skill-1 .progreso {
+    background: var(--color-graylight);
+}
+
+.skill-2 .progreso {
+    background: var(--color-graydark) linear-gradient(to left, transparent 10%, var(--color-graylight) 40%);
+}
+
+.skill-3 .progreso {
+    background: var(--color-graydark) linear-gradient(to left, transparent 10%, var(--color-graylight) 30%);
+}
+
+.skill-4 .progreso {
+    background: var(--color-graydark) linear-gradient(to left, transparent 70%, var(--color-graylight) 75%);
+}
+
+.skill-5 .progreso {
+    background: var(--color-graylight);
+}
 
 
 /* Elementos responsive*/
