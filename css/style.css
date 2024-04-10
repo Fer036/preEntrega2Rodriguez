@@ -218,6 +218,11 @@ svg circle {
     stroke-dashoffset: 300px;
 }
 
+/* Portfolio - Bootstrap*/
+.card{
+    box-shadow: -3px -3px 7px rgb(59, 59, 59), 3px 3px 5px var(--color-dark);
+}
+
 /* Elementos responsive*/
 @media screen and (max-width: 992px) {
     footer {
@@ -315,6 +320,11 @@ svg circle {
         transition-duration: .5s;
         width: 20rem;
         height: auto;
+    }
+
+    /*Portfolio*/
+    .card-portfolio {
+        padding-bottom: 8rem;
     }
 }
 
