@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap rel="stylesheet');
 
-
+/* Reseteo */
 * {
     padding: 0;
     margin: 0;
@@ -10,6 +10,7 @@
     box-sizing: border-box;
 }
 
+/* Declaración de colores */
 :root {
     --color-dark: #070B0E;
     --color-graydark: #353A40;
@@ -18,6 +19,7 @@
     --color-brown: #A6805C;
 }
 
+/* Formato general */
 body {
     height: 98vh;
     width: 100%;
@@ -36,7 +38,7 @@ main {
 }
 
 
-/*Barra de navegación y footer*/
+/*Barra de navegación y footer - Bootstrap */
 .navbar,
 footer {
     background-color: var(--color-graydark);
@@ -79,7 +81,7 @@ footer {
     color: var(--color-brown) !important;
 }
 
-/* Contenido página de inicio */
+/* Contenido página de inicio - Grid */
 
 .contenedor-grid {
     display: grid;
@@ -107,19 +109,17 @@ footer {
     height: auto;
 }
 
-/* Página ¿Quién soy?*/
+/* Página ¿Quién soy? - Bootstrap*/
 .pag-titulo {
     color: var(--color-brown);
 }
 
-.contenedor-about,
-.contenedor-skills {
+.contenedor-about {
     color: var(--color-graylight);
 }
 
 .sobremi-desc,
-.sobremi-obj,
-.skills {
+.sobremi-obj {
     box-shadow: 0px 0px 11px -1px var(--color-graylight);
     -webkit-box-shadow: 0px 0px 11px -1px var(--color-graylight);
     -moz-box-shadow: 0px 0px 11px -1px var(--color-graylight);
@@ -129,68 +129,97 @@ p {
     text-align: justify;
 }
 
-/* Skills */
+/* Skills - FlexBox */
 .contenedor-skills {
-    width: 100%;
     height: auto;
+    width: auto;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+    text-align: center;
 
-.titulo-skills {
-    color: var(--color-brown);
     margin: 3rem;
 }
 
-.skills {
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    height: auto;
+    width: auto;
+
+    margin: 3rem;
+}
+
+.box div span {
+    color: var(--color-graylight);
+}
+
+.skill {
+    height: 8rem;
+    width: 8rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 3rem 1rem 3rem;
+
+    position: relative;
+    border-radius: 50%;
+    box-shadow: -3px -3px 7px rgb(59, 59, 59), 3px 3px 5px var(--color-dark);
+
+    overflow: hidden;
+}
+
+.skill::after {
+    content: '';
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    height: 80%;
     width: 80%;
-    margin: auto;
-    text-align: center;
-    padding: 1rem;
+
+    border-radius: 50%;
+    box-shadow: inset -3px -3px 7px rgb(59, 59, 59), inset 3px 3px 5px var(--color-dark);
+    background: rgb(7, 11, 14);
+    background: linear-gradient(90deg, rgba(7, 11, 14, 1) 0%, rgb(44, 48, 53) 100%);
+
+    transform: translate(-50%, -50%);
 }
 
-.skills div {
-    margin-bottom: 0.5rem;
-}
-
-.progreso {
-    height: 2rem;
+svg {
+    position: relative;
     width: 100%;
-    margin: 0.1rem;
-    
-    border: 3px solid var(--color-brown);
+    height: 100%;
 }
 
-.progreso p {
-    color: var(--color-brown);
-    margin-left: 3rem;
+svg circle {
+    position: absolute;
+    transform: scale(0.8);
+    transform-origin: center;
 
-    font-weight: bold;
+    stroke: var(--color-brown);
+    stroke-width: .85rem;
 }
 
-.skill-1 .progreso {
-    background: var(--color-graylight);
+.skill2,
+.skill3 {
+    stroke-dasharray: 280px;
+    stroke-dashoffset: 10px;
 }
 
-.skill-2 .progreso {
-    background: var(--color-graydark) linear-gradient(to left, transparent 10%, var(--color-graylight) 40%);
+.skill4 {
+    stroke-dasharray: 300px;
+    stroke-dashoffset: 10px;
 }
 
-.skill-3 .progreso {
-    background: var(--color-graydark) linear-gradient(to left, transparent 10%, var(--color-graylight) 30%);
+.skill5,
+.skill6 {
+    stroke-dasharray: 200px;
+    stroke-dashoffset: 300px;
 }
-
-.skill-4 .progreso {
-    background: var(--color-graydark) linear-gradient(to left, transparent 70%, var(--color-graylight) 75%);
-}
-
-.skill-5 .progreso {
-    background: var(--color-graylight);
-}
-
 
 /* Elementos responsive*/
 @media screen and (max-width: 992px) {
@@ -226,9 +255,44 @@ p {
         width: 30rem;
         height: auto;
     }
+
+        /*Skills*/
+        .contenedor-skills {
+            width: auto;
+            height: auto;
+            padding-bottom: 7rem;
+        }
+    
+        .contenedor-skills,
+        .box {
+            margin: 2rem;
+            font-size: 1rem;
+        }
+    
+        .skill {
+            height: 6rem;
+            width: 6rem;
+        }
+    
+        .skill2,
+        .skill3 {
+            stroke-dasharray: 230px;
+            stroke-dashoffset: 10px;
+        }
+    
+        .skill4 {
+            stroke-dasharray: 250px;
+            stroke-dashoffset: 10px;
+        }
+    
+        .skill5,
+        .skill6 {
+            stroke-dasharray: 160px;
+            stroke-dashoffset: 10px;
+        }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 695px) {
     .nav-img {
         width: 2rem;
         height: auto;
@@ -254,5 +318,82 @@ p {
         transition-duration: .5s;
         width: 20rem;
         height: auto;
+    }
+}
+
+@media screen and (min-width: 381px) and (max-width: 575px) {
+
+    /*Skills*/
+    .contenedor-skills {
+        width: auto;
+        height: auto;
+        padding-bottom: 7rem;
+    }
+
+    .contenedor-skills,
+    .box {
+        margin: 2rem;
+        font-size: 0.7rem;
+    }
+
+    .skill {
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .skill2,
+    .skill3 {
+        stroke-dasharray: 200px;
+        stroke-dashoffset: 10px;
+    }
+
+    .skill4 {
+        stroke-dasharray: 220px;
+        stroke-dashoffset: 10px;
+    }
+
+    .skill5,
+    .skill6 {
+        stroke-dasharray: 140px;
+        stroke-dashoffset: 10px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+
+    /*Skills*/
+    .contenedor-skills {
+        width: auto;
+        height: auto;
+        padding-bottom: 7rem;
+    }
+
+    .contenedor-skills,
+    .box {
+        margin: 1rem;
+        font-size: 0.7rem;
+    }
+
+    .skill {
+        height: 4rem;
+        width: 4rem;
+    }
+
+
+    .skill2,
+    .skill3 {
+        stroke-dasharray: 180px;
+        stroke-dashoffset: 10px;
+    }
+
+    .skill4 {
+        stroke-dasharray: 190px;
+        stroke-dashoffset: 10px;
+    }
+
+    .skill5,
+    .skill6 {
+        stroke-dasharray: 100px;
+        stroke-dashoffset: 0px;
     }
 }
