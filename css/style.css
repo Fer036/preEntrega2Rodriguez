@@ -219,8 +219,63 @@ svg circle {
 }
 
 /* Portfolio - Bootstrap*/
-.card{
+.card {
     box-shadow: -3px -3px 7px rgb(59, 59, 59), 3px 3px 5px var(--color-dark);
+}
+
+/*Contacto -  Grid*/
+.contenedor-contacto {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr;
+    grid-auto-rows: 40rem;
+
+    gap: 0px;
+    justify-items: center;
+    justify-content: center;
+}
+
+.titulo-cont {
+    text-align: center;
+    margin: 1rem;
+}
+
+.formulario,
+.mapa {
+    width: 25rem;
+    height: fit-content;
+    padding: 1rem;
+    margin: 1rem;
+    box-shadow: -3px -3px 7px rgb(59, 59, 59), 3px 3px 5px var(--color-dark);
+    padding: 1rem;
+
+    color: var(--color-graylight);
+    text-align: center;
+}
+
+input,
+textarea,
+.select-contact {
+    width: 22rem;
+    text-align: center;
+    border-radius: 0.4rem;
+}
+
+.boton-cont {
+    background-color: var(--color-brown);
+    border-radius: 0.4rem;
+    font-size: .7rem;
+}
+
+.boton-cont:hover {
+    color: var(--color-brown);
+    background-color: var(--color-graylight);
+}
+
+iframe {
+    width: 20rem;
+    height: 20rem;
 }
 
 /* Elementos responsive*/
@@ -236,6 +291,8 @@ svg circle {
 }
 
 @media (min-width: 576px) and (max-width: 992px) {
+
+    /* Inicio */
     .contenedor-grid {
         grid-auto-rows: auto;
         grid-template-columns: 1fr;
@@ -291,6 +348,12 @@ svg circle {
     .skill6 {
         stroke-dasharray: 160px;
         stroke-dashoffset: 10px;
+    }
+
+    /* Contacto */
+    .contenedor-contacto {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 1fr 1fr;
     }
 }
 
@@ -364,6 +427,12 @@ svg circle {
         stroke-dasharray: 140px;
         stroke-dashoffset: 10px;
     }
+
+    /* Contacto */
+    .contenedor-contacto {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 1fr 1fr;
+    }
 }
 
 @media screen and (max-width: 380px) {
@@ -402,5 +471,30 @@ svg circle {
     .skill6 {
         stroke-dasharray: 100px;
         stroke-dashoffset: 0px;
+    }
+
+    /* Contacto */
+    .contenedor-contacto {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 1fr 1fr;
+    }
+
+    .formulario,
+    .mapa {
+        width: 18rem;
+        height: fit-content;
+    }
+
+    iframe {
+        width: 15rem;
+        height: 20rem;
+    }
+
+    input,
+    textarea,
+    .select-contact {
+        width: 15rem;
+        text-align: center;
+        border-radius: 0.4rem;
     }
 }

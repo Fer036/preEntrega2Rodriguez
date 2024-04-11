@@ -57,7 +57,56 @@
         </nav>
     </header>
 
-    <!-- Página ¿Quién soy? -->
+    <!-- Página Contacto -->
+    <main>
+        <div class="titulo-cont">
+            <h1 class="pag-titulo">Contacto</h1>
+        </div>
+        <section class="contenedor-contacto">
+            <!-- Formulario -->
+            <article class="formulario">
+                <form action="#" method="get">
+                    <label for="name">
+                        Nombre y Apellido:
+                        <input type="text" placeholder="Nombre y apellido" name="name">
+                    </label>
+                    <label for="mail">
+                        Mail:
+                        <input type="email" placeholder="xxxx@xxxx.com" name="mail">
+                    </label>
+                    <label for="phone">
+                        Teléfono:
+                        <input type="number" placeholder="(111) 010101" name="phone">
+                    </label>
+                    <label for="medio-contacto">
+                        ¿Qué medio de contacto preferís?
+                        <select class="select-contact" name="medio-contacto" id="">
+                            <option value="Whatsapp"> Whatsapp</option>
+                            <option value="mail">E-Mail</option>
+                            <option value="call">Llamada</option>
+                        </select>
+                    </label>
+                    <label for="consulta" class="consulta">
+                        Consulta:
+                        <textarea name="consulta" id="consulta" cols="30" rows="10"></textarea>
+                    </label>
+                    <input type="submit" class="boton-cont" value="Submit">
+                    <input type="reset" class="boton-cont" value="Reset Form">
+                </form>
+            </article>
+
+            <!-- Mapa -->
+            <article class="mapa">
+                <p>Villa del Rosario, Córdoba, Argentina</p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54395.822502924406!2d-63.57265921174837!3d-31.558779321550915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94332a53b2697ec9%3A0x37f3384e4293f013!2sVilla%20del%20Rosario%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1710202342492!5m2!1ses-419!2sar"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </article>
+            </article>
+        </section>
+    </main>
+
     <!-- Footer -->
     <footer id="pie-pagina" class="py-2">
         <div class="container text-xl-center text-lg-start text-md-start">
