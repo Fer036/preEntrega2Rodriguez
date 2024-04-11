@@ -51,7 +51,8 @@ footer {
 }
 
 footer {
-    position: static !important;
+    width: 100%;
+    position: fixed;
     bottom: 0;
 }
 
@@ -73,12 +74,6 @@ footer {
 .nav-item:active {
     border-radius: 10%;
     box-shadow: 6px 5px 8px #0000008c inset;
-}
-
-#pie-pagina {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
 }
 
 .btn:hover,
@@ -120,6 +115,7 @@ footer {
 
 .contenedor-about {
     color: var(--color-graylight);
+    padding-bottom: 6rem;
 }
 
 .sobremi-desc,
@@ -139,6 +135,7 @@ p {
     text-align: center;
 
     margin: 3rem;
+    padding-bottom: 7rem;
 }
 
 .box {
@@ -224,6 +221,10 @@ svg circle {
 }
 
 /* Portfolio - Bootstrap*/
+.contenedor-portfolio {
+    padding-bottom: 7rem;
+}
+
 .card {
     box-shadow: -3px -3px 7px rgb(59, 59, 59), 3px 3px 5px var(--color-dark);
 }
@@ -235,6 +236,7 @@ svg circle {
     display: grid;
     grid-template-columns: 1.5fr 1.5fr;
     grid-auto-rows: 40rem;
+    padding-bottom: 4rem;
 
     gap: 0px;
     justify-items: center;
@@ -286,13 +288,23 @@ iframe {
 
 /* Elementos responsive*/
 @media screen and (max-width: 992px) {
+    /* Inicio */
+    .contenedor-grid {
+        padding-bottom: 6rem;
+    }
+    /* Footer */
     footer {
         width: 100%;
-        position: fixed !important;
     }
 
+    /* Sobre mi */
     .sobre-mi {
         padding-bottom: 7rem;
+    }
+
+    /* Portfolio */
+    .contenedor-portfolio {
+        padding-bottom: 10rem;
     }
 }
 
