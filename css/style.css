@@ -50,6 +50,11 @@ footer {
     font-size: 1.3rem;
 }
 
+footer {
+    position: static !important;
+    bottom: 0;
+}
+
 .nav-img {
     width: 3rem;
     height: auto;
