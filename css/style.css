@@ -256,6 +256,7 @@ svg circle {
 
 input,
 textarea,
+label,
 .select-contact {
     width: 22rem;
     text-align: center;
@@ -430,8 +431,16 @@ iframe {
 
     /* Contacto */
     .contenedor-contacto {
+        width: auto;
+        margin: auto;
         grid-template-columns: 1fr;
         grid-auto-rows: 1fr 1fr;
+    }
+
+    .formulario,
+    .mapa {
+        max-width: 24rem;
+        margin: .5;
     }
 }
 
@@ -473,28 +482,26 @@ iframe {
         stroke-dashoffset: 0px;
     }
 
+
     /* Contacto */
     .contenedor-contacto {
+        max-width: 100%;
+        height: auto;
+        margin: auto;
         grid-template-columns: 1fr;
         grid-auto-rows: 1fr 1fr;
     }
 
     .formulario,
     .mapa {
-        width: 18rem;
-        height: fit-content;
-    }
-
-    iframe {
-        width: 15rem;
-        height: 20rem;
+        max-width: 80%;
+        margin: .5;
     }
 
     input,
     textarea,
+    label,
     .select-contact {
-        width: 15rem;
-        text-align: center;
-        border-radius: 0.4rem;
+        max-width: 18rem;
     }
 }
